@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700");
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 @import "//bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_bootstrap.scss";
 /* line 9, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_normalize.scss */
@@ -1374,8 +1375,4 @@ th {
   .col-lg-offset-12 {
     margin-left: 100%;
   }
-}
-/* line 8, ../sass/main.scss */
-body {
-  width: 20px;
 }
