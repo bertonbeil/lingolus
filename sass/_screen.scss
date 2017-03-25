@@ -1,0 +1,86 @@
+// desctop
+@media (max-width: 1199px) {
+
+  .welcome-box {
+    margin-top: 200px;
+    margin-bottom: 100px;
+  }
+
+  .icon-box {
+    margin-bottom: 50px;
+    &__icon {
+      margin-right: 25px;
+      width: 100px;
+      height: 100px;
+      margin-bottom: 50px;
+    }
+    &__title {
+      font-size: 1rem;
+    }
+    &__text {
+      font-size: .9rem;
+    }
+  }
+
+  .about {
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0;
+  }
+
+
+
+
+}
+// netbook
+@media (max-width: 991px) {
+
+  .welcome-box {
+    margin-top: 150px;
+    margin-bottom: 75px;
+  }
+
+  .icon-box {
+    margin-bottom: 20px;
+    &__icon {
+      margin-right: 25px;
+      width: 100px;
+      height: 100px;
+      margin-bottom: 50px;
+    }
+    &__title {
+      font-size: 1.1rem;
+    }
+    &__text {
+      font-size: 1rem;
+    }
+  }
+
+  .about {
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0;
+  }
+
+
+
+}
+
+
+// tablet
+@media (max-width: 767px) {
+  .hamburger {
+    display: block;
+  }
+  .navbar {
+    height: 60px;
+
+    &-brand {
+    padding: 15px 15px;
+    height: 60px;
+    }
+  }
+  .xs-clr-l {
+    clear: left;
+  }
+}

@@ -8,6 +8,9 @@ body
 *
   box-sizing: border-box
 
+a
+  text-decoration: none
+
 // hel
 img.responsive
   width: 100%
@@ -27,29 +30,8 @@ img.responsive
 .b
   font-weight: 700
 
-header
-  position: fixed
-  top: 0
-  left: 0
-  width: 100%
-  height: 80px
-  line-height: 80px
-  background: $blue
-  z-index: 99
-
-  .logo
-    float: left
-    width: 200px
-    line-height: 0
-    padding: 23px 0
-
-  .nav
-    padding: 0
-    margin: 0
-    list-style-type: none
-
-    li
-      float: right
+.hamburger
+  display: none
 
 .navbar
   border: 0px
@@ -57,6 +39,14 @@ header
   margin: 0
   height: 80px
   box-shadow: 0px 1px 3px 0px rgba(14, 14, 14, 0.53)
+
+  &-collapse
+    height: 1px
+    overflow-y: hidden
+    transition: all .3s cubic-bezier(0.68, -0.55, 0.265, 1.55)
+    background-color: $blue
+    &.in
+      height: auto
 
   &-brand
     padding: 25px 15px
@@ -76,7 +66,6 @@ header
           color: rgba($w, 1)
           background: $tr
 
-
 .dropdown-lang
 
   .dropdowns-cap
@@ -95,30 +84,25 @@ header
 
     > li
       > a
+        font-size: 1rem
         text-decoration: none
         padding: 10px 20px
         color: rgba($w, .87)
-
         &:hover,
         &:focus
           color: rgba($w, 1)
           background-color: $tr
 
   &.open
-
     > a
       background-color: $tr
 
-
-  a.dropdown-toggle
-    float: right
 
 
 // welcome
 section
   position: relative
   padding: 100px 0
-
 
 .welcome
   padding: 0
@@ -252,19 +236,23 @@ $btn-default-bg: $blue
 
 // btns
 .btn
+  position: relative
+  font-size: 1.2rem
+  padding: 15px 40px
+  border-radius: 3px
   outline: 0
   text-transform: uppercase
   border: 0px
   transition: all .2s
-  box-shadow: 0px 2px 5px 0px rgba($b, 0.53)
-
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12)
+  background-color: $blue
 
   &:hover,
   &:focus,
   &.focus
     outline: 0
-    box-shadow: 0px 4px 8px 0px rgba($b, 0.53)
-    text-decoration: none
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.18), 0 8px 16px rgba(0, 0, 0, 0.36)
+    background-color: $blue
 
   &:active,
   &.active
@@ -274,34 +262,63 @@ $btn-default-bg: $blue
 .btn-default
   @include button-variant($btn-default-color, $btn-default-bg, $btn-default-border)
 
-.btn-primary
-  @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border)
+.btn-gr
+  @include button-variant($w, $green, $btn-primary-border)
 
 .btn-info
   @include button-variant($btn-info-color, $btn-info-bg, $btn-info-border)
 
 
 .btn-dream
-  font-size: 1.2rem
-  padding: 15px 40px
-  border-radius: 3px
-  background: $blue
+  background-color: $blue
+  margin-bottom: 30px
 
 .btn-gr
-  font-size: 1.2rem
-  padding: 15px 40px
-  border-radius: 3px
   background-color: $green
 
-  &:hover,
-  &:focus,
-  &.focus
-    outline: 0
-    box-shadow: 0px 4px 8px 0px rgba($b, 0.53)
-    text-decoration: none
-    background-color: $green
 
-  &:active,
-  &.active
-    outline: 0
-    background-image: none
+//ripple
+.withripple
+  position: relative
+
+.ripple-container
+  position: absolute
+  top: 0
+  left: 0
+  z-index: 1
+  width: 100%
+  height: 100%
+  overflow: hidden
+  border-radius: inherit
+  pointer-events: none
+
+.ripple
+  position: absolute
+  width: 20px
+  height: 20px
+  margin-left: -10px
+  margin-top: -10px
+  border-radius: 100%
+  background-color: #fff
+  background-color: rgba(255, 255, 255, 0.05)
+  -webkit-transform: scale(1)
+  -ms-transform: scale(1)
+  -o-transform: scale(1)
+  transform: scale(1)
+  -webkit-transform-origin: 50%
+  -ms-transform-origin: 50%
+  -o-transform-origin: 50%
+  transform-origin: 50%
+  opacity: 0
+  pointer-events: none
+
+  &.ripple-on
+    -webkit-transition: opacity 0.15s ease-in 0s, -webkit-transform 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.1s
+    -o-transition: opacity 0.15s ease-in 0s, -o-transform 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.1s
+    transition: opacity 0.15s ease-in 0s, transform 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.1s
+    opacity: .3
+  &.ripple-out
+    -webkit-transition: opacity 0.1s linear 0s !important
+    -o-transition: opacity 0.1s linear 0s !important
+    transition: opacity 0.1s linear 0s !important
+    opacity: 0

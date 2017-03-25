@@ -10,44 +10,23 @@
 </head>
 <body>
 
-
-<!-- <header class="header">
-  <div class="container">
-    <div class="logo">
-      <a href="#">
-        <img src="img/icons/logo.png" alt="">
-      </a>
-    </div>
-    <div class="pull-right">
-      <ul class="nav">
-        <li><a href="">item 1</a></li>
-        <li><a href="">item 2</a></li>
-        <li><a href="">item 3</a></li>
-      </ul>
-    </div>
-  </div>
-</header> -->
-
 <nav class="navbar navbar-fixed-top">
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
+      <button class="hamburger navbar-toggle hamburger--elastic" type="button" aria-label="Menu" aria-controls="navigation" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
       </button>
       <a class="navbar-brand" href="#">
         <img src="img/icons/logo.png" alt="">
       </a>
     </div>
-
+    <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1" aria-expanded="false">
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown dropdown-lang">
-          <a href="#" class="dropdown-toggle"
-                      data-toggle="dropdown"
-                      role="button" aria-haspopup="true"
-                      aria-expanded="false">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
             <span class="dropdowns-cap">Display language:</span>English <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="#">Espanol</a></li>
@@ -57,44 +36,46 @@
             <li><a href="#">Portugues</a></li>
           </ul>
         </li>
-        <li><a href="#">For Volunteters</a></li>
+        <li><a class="withripple" href="javascript:void(0)">For Volunteters <div class="ripple-container">
+          <div class="ripple"></div>
+        </div> </a></li>
         <li><a href="#">Sign in / Sign up</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
+  </div><!-- /.container -->
 </nav>
 
 <!-- home intro -->
 <section class="welcome">
   <div class="container">
-    <div class="offset-1 col-md-10 ">
+    <div class="col-sm-12">
       <div class="row welcome-box">
         <h1 class="welcome-box__text">The shortest path to real-life conversations <br>
 in a new language.</h1>
-        <button type="button" class="btn btn-default btn-lg btn-gr">Start learning now</button>
+        <a href="#" class="btn btn-default btn-lg btn-gr">Start learning now</a>
       </div>
     </div>
     <div class="row icon-box">
-      <div class="col-md-4">
+      <div class="col-md-4 col-xs-12">
         <div class="icon-box__icon"></div>
-        <h4 class="icon-box__title">Full Language </h4>
+        <h5 class="icon-box__title">Full Language Courses</h5>
         <p class="icon-box__text">
           Bite-sized lessons perfect
           for everyday life, work
           and travel.
         </p>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-4 col-xs-12">
         <div class="icon-box__icon"></div>
-        <h4 class="icon-box__title">Corrections from native speakers </h4>
+        <h5 class="icon-box__title">Corrections from native speakers </h5>
         <p class="icon-box__text">
           Learn with 60 Million
           users worldwide.
         </p>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-4 col-xs-12">
         <div class="icon-box__icon"></div>
-        <h4 class="icon-box__title">Become a volunteer! </h4>
+        <h5 class="icon-box__title">Become a volunteer! </h5>
         <p class="icon-box__text">
           Bite-sized lessons perfect
           for everyday life, work
@@ -111,7 +92,10 @@ in a new language.</h1>
   <div class="box">
       <div class="row nm">
         <h1 class="title">Who We Are</h1>
-        <div class="col-md-7">
+        <div class="col-md-5 col-md-push-7 col-sm-6 col-sm-push-6">
+          <img class="responsive" src="img/1.png" alt="">
+        </div>
+        <div class="col-md-7 col-md-pull-5 col-sm-6 col-sm-pull-6">
           <h5 class="s-title">A Little Brief About Dreamlang</h5>
           <p class="s-text">
     Dreamlang is a new platform for learning foreign languages. We obsess over crafting
@@ -121,9 +105,6 @@ in a new language.</h1>
     you need to start having practical, everyday conversations.
           </p>
           <button class="btn btn-default btn-lg btn-dream">More</button>
-        </div>
-        <div class="col-md-5">
-          <img class="responsive" src="img/1.png" alt="">
         </div>
       </div>
   </div>
@@ -191,7 +172,10 @@ technology will get your pronunciation on point.
   <div class="box">
       <div class="row nm">
         <h1 class="title">Become a Volunteer</h1>
-        <div class="col-md-7">
+        <div class="col-md-5 col-md-push-7 col-sm-6 col-sm-push-6">
+          <img class="responsive" src="img/2.jpg" alt="">
+        </div>
+        <div class="col-md-7 col-md-pull-5 col-sm-6 col-sm-pull-6">
           <h5 class="s-title">A Little Brief About Dreamlang</h5>
           <p class="s-text">
     Dreamlang is a new platform for learning foreign languages. We obsess over crafting
@@ -201,9 +185,6 @@ technology will get your pronunciation on point.
     you need to start having practical, everyday conversations.
           </p>
           <button class="btn btn-default btn-lg btn-dream">More</button>
-        </div>
-        <div class="col-md-5">
-          <img class="responsive" src="img/2.jpg" alt="">
         </div>
       </div>
   </div>
@@ -244,7 +225,7 @@ technology will get your pronunciation on point.
         <p>Our Content Specialists</p>
         <p>Our Board</p>
       </div>
-      <div class="col-sm-2 col-xs-4">
+      <div class="col-sm-2 col-xs-6 xs-clr-l">
         <h5>SUPPORT</h5>
         <p>Help center</p>
         <p>Support Community</p>
@@ -253,12 +234,12 @@ technology will get your pronunciation on point.
         <p>Share Your Story</p>
         <p>Press</p>
       </div>
-      <div class="col-sm-2 col-xs-4">
+      <div class="col-sm-2 col-xs-6">
         <h5>VOLUNTEER</h5>
         <p>Full Time</p>
         <p>Internships</p>
       </div>
-      <div class="col-sm-2 col-xs-4">
+      <div class="col-sm-2 col-xs-6">
         <h5>CONTRIBUTE</h5>
         <p>Donate</p>
         <p>Volunteer</p>
@@ -269,11 +250,11 @@ technology will get your pronunciation on point.
 </footer><!--/ footer -->
 
 <!-- script -->
-<script src="js/jquery.min.js"></script>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
 
-<script src="js/bootstrap.min.js"></script>
-
+<script src="bower_components/bootstrap-sass/assets/javascripts/bootstrap.js"></script>
 
 <script src="js/dreamlang.js"></script>
+
 </body>
 </html>
