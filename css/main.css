@@ -4880,17 +4880,18 @@ img.responsive {
   overflow-y: hidden;
   transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   background-color: #2196f3;
+  max-height: 500px !important;
 }
-/* line 48, ../sass/_dreamlang.sass */
+/* line 49, ../sass/_dreamlang.sass */
 .navbar-collapse.in {
   height: auto;
 }
-/* line 51, ../sass/_dreamlang.sass */
+/* line 52, ../sass/_dreamlang.sass */
 .navbar-brand {
   padding: 25px 15px;
   height: 80px;
 }
-/* line 58, ../sass/_dreamlang.sass */
+/* line 59, ../sass/_dreamlang.sass */
 .navbar-nav > li > a,
 .navbar .navbar-nav > li > a {
   color: rgba(255, 255, 255, 0.87);
@@ -4898,7 +4899,7 @@ img.responsive {
   padding-top: 30px;
   padding-bottom: 30px;
 }
-/* line 64, ../sass/_dreamlang.sass */
+/* line 65, ../sass/_dreamlang.sass */
 .navbar-nav > li > a:hover, .navbar-nav > li > a:focus,
 .navbar .navbar-nav > li > a:hover,
 .navbar .navbar-nav > li > a:focus {
@@ -4906,11 +4907,11 @@ img.responsive {
   background: transparent;
 }
 
-/* line 71, ../sass/_dreamlang.sass */
+/* line 72, ../sass/_dreamlang.sass */
 .dropdown-lang .dropdowns-cap {
   padding-right: 10px;
 }
-/* line 74, ../sass/_dreamlang.sass */
+/* line 75, ../sass/_dreamlang.sass */
 .dropdown-lang ul.dropdown-menu {
   padding: 0;
   border: 0;
@@ -4918,35 +4919,35 @@ img.responsive {
   background-color: #2196f3;
   box-shadow: 0px 1px 3px 0px rgba(14, 14, 14, 0.53);
 }
-/* line 81, ../sass/_dreamlang.sass */
+/* line 82, ../sass/_dreamlang.sass */
 .dropdown-lang ul.dropdown-menu .divider {
   margin: 0;
   background-color: rgba(255, 255, 255, 0.14);
 }
-/* line 86, ../sass/_dreamlang.sass */
+/* line 87, ../sass/_dreamlang.sass */
 .dropdown-lang ul.dropdown-menu > li > a {
   font-size: 1rem;
   text-decoration: none;
   padding: 10px 20px;
   color: rgba(255, 255, 255, 0.87);
 }
-/* line 91, ../sass/_dreamlang.sass */
+/* line 92, ../sass/_dreamlang.sass */
 .dropdown-lang ul.dropdown-menu > li > a:hover, .dropdown-lang ul.dropdown-menu > li > a:focus {
   color: white;
   background-color: transparent;
 }
-/* line 97, ../sass/_dreamlang.sass */
+/* line 98, ../sass/_dreamlang.sass */
 .dropdown-lang.open > a {
   background-color: transparent;
 }
 
-/* line 103, ../sass/_dreamlang.sass */
+/* line 104, ../sass/_dreamlang.sass */
 section {
   position: relative;
   padding: 100px 0;
 }
 
-/* line 107, ../sass/_dreamlang.sass */
+/* line 108, ../sass/_dreamlang.sass */
 .welcome {
   padding: 0;
   height: auto;
@@ -4954,29 +4955,29 @@ section {
   background: url(../img/bg.jpg) no-repeat center center;
   background-size: cover;
 }
-/* line 114, ../sass/_dreamlang.sass */
+/* line 115, ../sass/_dreamlang.sass */
 .welcome-box {
   margin-top: 250px;
   text-align: center;
   margin-bottom: 150px;
 }
-/* line 119, ../sass/_dreamlang.sass */
+/* line 120, ../sass/_dreamlang.sass */
 .welcome-box__text {
   font-weight: 500;
   color: #ffffff;
 }
 
-/* line 125, ../sass/_dreamlang.sass */
+/* line 126, ../sass/_dreamlang.sass */
 .icon-box {
   margin-bottom: 100px;
   text-align: left;
 }
-/* line 129, ../sass/_dreamlang.sass */
+/* line 130, ../sass/_dreamlang.sass */
 .icon-box.row {
   margin-right: 0;
   margin-left: 0;
 }
-/* line 132, ../sass/_dreamlang.sass */
+/* line 133, ../sass/_dreamlang.sass */
 .icon-box__icon {
   float: left;
   margin-right: 25px;
@@ -4986,18 +4987,18 @@ section {
   background: url(../img/icons/www.png) no-repeat center center;
   background-size: cover;
 }
-/* line 140, ../sass/_dreamlang.sass */
+/* line 141, ../sass/_dreamlang.sass */
 .icon-box__title {
   font-weight: 500;
   color: #ffffff;
 }
-/* line 143, ../sass/_dreamlang.sass */
+/* line 144, ../sass/_dreamlang.sass */
 .icon-box__text {
   font-weight: 400;
   color: rgba(255, 255, 255, 0.57);
 }
 
-/* line 149, ../sass/_dreamlang.sass */
+/* line 150, ../sass/_dreamlang.sass */
 .about {
   border-radius: 5px;
   background: #ffffff;
@@ -5010,60 +5011,60 @@ section {
   padding: 50px 100px;
   z-index: 2;
 }
-/* line 160, ../sass/_dreamlang.sass */
+/* line 161, ../sass/_dreamlang.sass */
 .about .box {
   padding: 50px 0;
 }
-/* line 162, ../sass/_dreamlang.sass */
+/* line 163, ../sass/_dreamlang.sass */
 .about .title {
   font-weight: 400;
   text-align: center;
   margin-bottom: 50px;
 }
-/* line 166, ../sass/_dreamlang.sass */
+/* line 167, ../sass/_dreamlang.sass */
 .about .s-title {
   font-weight: 400;
   color: rgba(0, 0, 0, 0.87);
   margin-bottom: 40px;
 }
-/* line 170, ../sass/_dreamlang.sass */
+/* line 171, ../sass/_dreamlang.sass */
 .about .s-text {
   font-weight: 400;
   color: rgba(0, 0, 0, 0.57);
   margin-bottom: 50px;
 }
 
-/* line 175, ../sass/_dreamlang.sass */
+/* line 176, ../sass/_dreamlang.sass */
 .media {
   margin-top: 80px;
 }
-/* line 177, ../sass/_dreamlang.sass */
+/* line 178, ../sass/_dreamlang.sass */
 .media:first-child {
   margin-top: 80px;
 }
-/* line 179, ../sass/_dreamlang.sass */
+/* line 180, ../sass/_dreamlang.sass */
 .media .media-left {
   padding-right: 25px;
 }
-/* line 182, ../sass/_dreamlang.sass */
+/* line 183, ../sass/_dreamlang.sass */
 .media img {
   width: 100px;
   height: 100px;
 }
-/* line 185, ../sass/_dreamlang.sass */
+/* line 186, ../sass/_dreamlang.sass */
 .media .media-body {
   vertical-align: middle;
 }
-/* line 188, ../sass/_dreamlang.sass */
+/* line 189, ../sass/_dreamlang.sass */
 .media .media-body h4 {
   margin-bottom: 15px;
 }
-/* line 191, ../sass/_dreamlang.sass */
+/* line 192, ../sass/_dreamlang.sass */
 .media .media-body p {
   margin-bottom: inherit;
 }
 
-/* line 194, ../sass/_dreamlang.sass */
+/* line 195, ../sass/_dreamlang.sass */
 .footer {
   position: relative;
   background: #1976d2;
@@ -5071,7 +5072,7 @@ section {
   padding-top: 100px;
   padding-bottom: 100px;
 }
-/* line 201, ../sass/_dreamlang.sass */
+/* line 202, ../sass/_dreamlang.sass */
 .footer .social {
   float: left;
   width: 100%;
@@ -5079,7 +5080,7 @@ section {
   padding: 0;
   margin: 0;
 }
-/* line 208, ../sass/_dreamlang.sass */
+/* line 209, ../sass/_dreamlang.sass */
 .footer .social li {
   float: left;
   background: #2196f3;
@@ -5089,11 +5090,11 @@ section {
   margin-right: 10px;
   padding: 10px;
 }
-/* line 217, ../sass/_dreamlang.sass */
+/* line 218, ../sass/_dreamlang.sass */
 .footer .social li img {
   width: 20px;
 }
-/* line 220, ../sass/_dreamlang.sass */
+/* line 221, ../sass/_dreamlang.sass */
 .footer h5 {
   color: rgba(255, 255, 255, 0.87);
   font-weight: 400;
@@ -5101,14 +5102,14 @@ section {
   margin-bottom: 30px;
   text-transform: uppercase;
 }
-/* line 226, ../sass/_dreamlang.sass */
+/* line 227, ../sass/_dreamlang.sass */
 .footer p {
   color: rgba(255, 255, 255, 0.57);
   margin: 10px 0;
   cursor: pointer;
 }
 
-/* line 238, ../sass/_dreamlang.sass */
+/* line 239, ../sass/_dreamlang.sass */
 .btn {
   position: relative;
   font-size: 1.2rem;
@@ -5121,19 +5122,19 @@ section {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
   background-color: #2196f3;
 }
-/* line 250, ../sass/_dreamlang.sass */
+/* line 251, ../sass/_dreamlang.sass */
 .btn:hover, .btn:focus, .btn.focus {
   outline: 0;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.18), 0 8px 16px rgba(0, 0, 0, 0.36);
   background-color: #2196f3;
 }
-/* line 257, ../sass/_dreamlang.sass */
+/* line 258, ../sass/_dreamlang.sass */
 .btn:active, .btn.active {
   outline: 0;
   background-image: none;
 }
 
-/* line 262, ../sass/_dreamlang.sass */
+/* line 263, ../sass/_dreamlang.sass */
 .btn-default {
   color: #ffffff;
   background-color: #2196f3;
@@ -5178,7 +5179,7 @@ section {
   background-color: #ffffff;
 }
 
-/* line 265, ../sass/_dreamlang.sass */
+/* line 266, ../sass/_dreamlang.sass */
 .btn-gr {
   color: #ffffff;
   background-color: #00e676;
@@ -5223,7 +5224,7 @@ section {
   background-color: #ffffff;
 }
 
-/* line 268, ../sass/_dreamlang.sass */
+/* line 269, ../sass/_dreamlang.sass */
 .btn-info {
   color: #fff;
   background-color: #5bc0de;
@@ -5268,23 +5269,23 @@ section {
   background-color: #fff;
 }
 
-/* line 272, ../sass/_dreamlang.sass */
+/* line 273, ../sass/_dreamlang.sass */
 .btn-dream {
   background-color: #2196f3;
   margin-bottom: 30px;
 }
 
-/* line 276, ../sass/_dreamlang.sass */
+/* line 277, ../sass/_dreamlang.sass */
 .btn-gr {
   background-color: #00e676;
 }
 
-/* line 281, ../sass/_dreamlang.sass */
+/* line 282, ../sass/_dreamlang.sass */
 .withripple {
   position: relative;
 }
 
-/* line 284, ../sass/_dreamlang.sass */
+/* line 285, ../sass/_dreamlang.sass */
 .ripple-container {
   position: absolute;
   top: 0;
@@ -5297,7 +5298,7 @@ section {
   pointer-events: none;
 }
 
-/* line 295, ../sass/_dreamlang.sass */
+/* line 296, ../sass/_dreamlang.sass */
 .ripple {
   position: absolute;
   width: 20px;
@@ -5318,14 +5319,14 @@ section {
   opacity: 0;
   pointer-events: none;
 }
-/* line 315, ../sass/_dreamlang.sass */
+/* line 316, ../sass/_dreamlang.sass */
 .ripple.ripple-on {
   -webkit-transition: opacity 0.15s ease-in 0s, -webkit-transform 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
   -o-transition: opacity 0.15s ease-in 0s, -o-transform 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
   transition: opacity 0.15s ease-in 0s, transform 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
   opacity: 0.3;
 }
-/* line 320, ../sass/_dreamlang.sass */
+/* line 321, ../sass/_dreamlang.sass */
 .ripple.ripple-out {
   -webkit-transition: opacity 0.1s linear 0s !important;
   -o-transition: opacity 0.1s linear 0s !important;
@@ -5418,6 +5419,19 @@ section {
   }
 
   /* line 83, ../sass/_screen.scss */
+  .dropdown-lang {
+    box-shadow: 0px 0px 0px 0px rgba(14, 14, 14, 0.53);
+  }
+  /* line 85, ../sass/_screen.scss */
+  .dropdown-lang.open {
+    box-shadow: 0px 1px 3px 0px rgba(14, 14, 14, 0.53);
+  }
+  /* line 90, ../sass/_screen.scss */
+  .dropdown-lang ul > li > a {
+    padding: 15px 15px 15px 25px !important;
+  }
+
+  /* line 96, ../sass/_screen.scss */
   .xs-clr-l {
     clear: left;
   }
