@@ -542,3 +542,12 @@ $('.hamburger').click(function () {
     $(this).addClass('is-active');
   }
 });
+
+// tooltip
+$('#login').hover(
+  function() {
+    $('#loginPopover').addClass('in');
+  }, function() {
+    $('#loginPopover').removeClass('in');
+  }
+);

@@ -39,7 +39,20 @@
         <li><a class="withripple" href="javascript:void(0)">For Volunteters <div class="ripple-container">
           <div class="ripple"></div>
         </div> </a></li>
-        <li><a href="#">Sign in / Sign up</a></li>
+        <li id="login">
+          <a href="#">Sign in / Sign up</a>
+          <!-- login popover -->
+          <div id="loginPopover" class="sign popover">
+            <form action="" class="logfrom popover">
+              <!-- <input class="logfrom-input" type="email" placeholder="Email" required> -->
+              <input class="logfrom-input" type="text" placeholder="Login" required>
+              <input class="logfrom-input" type="password" placeholder="Password" required>
+              <button class="btn btn-gr btn-log">Sign in</button>
+            </form>
+              <a href="#" class="logfrom-help logfrom-help__one">Forgot password?</a>
+              <a href="#" class="logfrom-help logfrom-help__two">Create new account</a>
+          </div><!--/ login popover -->
+        </li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container -->
