@@ -1,7 +1,6 @@
 /* globals jQuery */
 
 (function ($) {
-  // Selector to select only not already processed elements
   $.expr[":"].notmdproc = function (obj) {
     if ($(obj).data("mdproc")) {
       return false;
@@ -201,12 +200,6 @@
             $formGroup.removeClass("is-empty");
           }
 
-          // Validation events do not bubble, so they must be attached directly to the input: http://jsfiddle.net/PEpRM/1/
-          //  Further, even the bind method is being caught, but since we are already calling #checkValidity here, just alter
-          //  the form-group on change.
-          //
-          // NOTE: I'm not sure we should be intervening regarding validation, this seems better as a README and snippet of code.
-          //        BUT, I've left it here for backwards compatibility.
           if (validate) {
             if (isValid) {
               $formGroup.removeClass("has-error");
@@ -222,14 +215,11 @@
         .on("blur", ".form-control, .form-group.is-fileinput", function () {
           _removeFormGroupFocus(this);
         })
-        // make sure empty is added back when there is a programmatic value change.
-        //  NOTE: programmatic changing of value using $.val() must trigger the change event i.e. $.val('x').trigger('change')
         .on("change", ".form-group input", function () {
           var $input = $(this);
           if ($input.attr("type") == "file") {
             return;
           }
-
           var $formGroup = $input.closest(".form-group");
           var value = $input.val();
           if (value) {
@@ -238,7 +228,6 @@
             $formGroup.addClass("is-empty");
           }
         })
-        // set the fileinput readonly field with the name of the file
         .on("change", ".form-group.is-fileinput input[type='file']", function () {
           var $input = $(this);
           var $formGroup = $input.closest(".form-group");
@@ -259,7 +248,6 @@
       $((selector) ? selector : this.options.withRipples).ripples();
     },
     "autofill": function () {
-      // This part of code will detect autofill when the page is loading (username and password inputs for example)
       var loading = setInterval(function () {
         $("input[type!=checkbox]").each(function () {
           var $this = $(this);
@@ -269,7 +257,6 @@
         });
       }, 100);
 
-      // After 10 seconds we are quite sure all the needed inputs are autofilled then we can stop checking them
       setTimeout(function () {
         clearInterval(loading);
       }, 10000);
@@ -352,41 +339,17 @@
 })(jQuery);
 
 
-/* Copyright 2014+, Federico Zivolo, LICENSE at https://github.com/FezVrasta/bootstrap-material-design/blob/master/LICENSE.md */
-/* globals jQuery, navigator */
-
 (function($, window, document, undefined) {
 
   "use strict";
-
-  /**
-   * Define the name of the plugin
-   */
   var ripples = "ripples";
-
-
-  /**
-   * Get an instance of the plugin
-   */
   var self = null;
-
-
-  /**
-   * Define the defaults of the plugin
-   */
   var defaults = {};
 
-
-  /**
-   * Create the main plugin function
-   */
   function Ripples(element, options) {
     self = this;
-
     this.element = $(element);
-
     this.options = $.extend({}, defaults, options);
-
     this._defaults = defaults;
     this._name = ripples;
 
@@ -394,59 +357,26 @@
   }
 
 
-  /**
-   * Initialize the plugin
-   */
+//Initialize the plugin
   Ripples.prototype.init = function() {
     var $element  = this.element;
 
     $element.on("click", function(event) {
-      /**
-       * Verify if the user is just touching on a device and return if so
-       */
+
       if(self.isTouch() && event.type === "mousedown") {
         return;
       }
-        console.log('obj');
-      /**
-       * Verify if the current element already has a ripple wrapper element and
-       * creates if it doesn't
-       */
       if(!($element.find(".ripple-container").length)) {
         $element.append('<div class="ripple-container"></div>');
       }
-
-
-      /**
-       * Find the ripple wrapper
-       */
       var $wrapper = $element.children(".ripple-container");
-
-
-      /**
-       * Get relY and relX positions
-       */
       var relY = self.getRelY($wrapper, event);
       var relX = self.getRelX($wrapper, event);
-
-
-      /**
-       * If relY and/or relX are false, return the event
-       */
       if(!relY && !relX) {
         return;
       }
 
-
-      /**
-       * Get the ripple color
-       */
       var rippleColor = self.getRipplesColor($element);
-
-
-      /**
-       * Create the ripple element
-       */
       var $ripple = $("<div></div>");
 
       $ripple
@@ -457,36 +387,16 @@
         "background-color": rippleColor
       });
 
-
-      /**
-       * Append the ripple to the wrapper
-       */
       $wrapper.append($ripple);
 
-
-      /**
-       * Make sure the ripple has the styles applied (ugly hack but it works)
-       */
       (function() { return window.getComputedStyle($ripple[0]).opacity; })();
 
-
-      /**
-       * Turn on the ripple animation
-       */
       self.rippleOn($element, $ripple);
 
-
-      /**
-       * Call the rippleEnd function when the transition "on" ends
-       */
       setTimeout(function() {
         self.rippleEnd($ripple);
       }, 500);
 
-
-      /**
-       * Detect when the user leaves the element
-       */
       $element.on("mouseup mouseleave touchend", function() {
         $ripple.data("mousedown", "off");
 
@@ -498,84 +408,44 @@
     });
   };
 
-
-  /**
-   * Get the new size based on the element height/width and the ripple width
-   */
   Ripples.prototype.getNewSize = function($element, $ripple) {
 
     return (Math.max($element.outerWidth(), $element.outerHeight()) / $ripple.outerWidth()) * 2.5;
   };
 
-
-  /**
-   * Get the relX
-   */
   Ripples.prototype.getRelX = function($wrapper,  event) {
     var wrapperOffset = $wrapper.offset();
 
     if(!self.isTouch()) {
-      /**
-       * Get the mouse position relative to the ripple wrapper
-       */
       return event.pageX - wrapperOffset.left;
     } else {
-      /**
-       * Make sure the user is using only one finger and then get the touch
-       * position relative to the ripple wrapper
-       */
       event = event.originalEvent;
-
       if(event.touches.length === 1) {
         return event.touches[0].pageX - wrapperOffset.left;
       }
-
       return false;
     }
   };
 
-
-  /**
-   * Get the relY
-   */
   Ripples.prototype.getRelY = function($wrapper, event) {
     var wrapperOffset = $wrapper.offset();
 
     if(!self.isTouch()) {
-      /**
-       * Get the mouse position relative to the ripple wrapper
-       */
       return event.pageY - wrapperOffset.top;
     } else {
-      /**
-       * Make sure the user is using only one finger and then get the touch
-       * position relative to the ripple wrapper
-       */
       event = event.originalEvent;
-
       if(event.touches.length === 1) {
         return event.touches[0].pageY - wrapperOffset.top;
       }
-
       return false;
     }
   };
 
-
-  /**
-   * Get the ripple color
-   */
   Ripples.prototype.getRipplesColor = function($element) {
-
     var color = $element.data("ripple-color") ? $element.data("ripple-color") : window.getComputedStyle($element[0]).color;
-
     return color;
   };
 
-
-  /**
-   * Verify if the client browser has transistion support
-   */
   Ripples.prototype.hasTransitionSupport = function() {
     var thisBody  = document.body || document.documentElement;
     var thisStyle = thisBody.style;
@@ -591,18 +461,10 @@
     return support;
   };
 
-
-  /**
-   * Verify if the client is using a mobile device
-   */
   Ripples.prototype.isTouch = function() {
     return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
   };
 
-
-  /**
-   * End the animation of the ripple
-   */
   Ripples.prototype.rippleEnd = function($ripple) {
     $ripple.data("animating", "off");
 
@@ -611,10 +473,6 @@
     }
   };
 
-
-  /**
-   * Turn off the ripple effect
-   */
   Ripples.prototype.rippleOut = function($ripple) {
     $ripple.off();
 
@@ -631,10 +489,6 @@
     });
   };
 
-
-  /**
-   * Turn on the ripple effect
-   */
   Ripples.prototype.rippleOn = function($element, $ripple) {
     var size = self.getNewSize($element, $ripple);
 
@@ -662,10 +516,6 @@
     }
   };
 
-
-  /**
-   * Create the jquery plugin function
-   */
   $.fn.ripples = function(options) {
     return this.each(function() {
       if(!$.data(this, "plugin_" + ripples)) {
@@ -680,11 +530,11 @@ $(function() {
     $.material.init();
 });
 
-//
+
 
 $('.hamburger').click(function () {
 
-  console.log( $(this).attr('aria-expanded') );
+  // console.log( $(this).attr('aria-expanded') );
 
   if( $(this).hasClass('is-active') ) {
       $(this).removeClass('is-active');

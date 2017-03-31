@@ -247,6 +247,64 @@ $btn-default-bg: $blue
 
 // $btn-default-border: none
 
+.sign
+  position: relative
+  margin-top: 130px
+  padding: 30px 0
+  background: $w
+  text-align: center
+
+  &-cover
+    margin-bottom: 35px
+    width: 150px
+    height: 150px
+    border-radius: 50%
+
+  &-title
+    text-transform: uppercase
+    font-weight: 400
+    margin-bottom: 30px
+
+.logfrom
+  width: 350px
+  max-width: 350px
+  margin: 0 auto
+  padding: 30px 0
+
+  &-input
+    width: 100%
+    padding: 10px 0
+    border-top: 0
+    border-left: 0
+    border-right: 0
+    outline: 0
+    margin-bottom: 25px
+    background-position: -25rem 0
+    background-size: 25rem 100%
+
+  input:focus,
+  input:valid
+    box-shadow: none
+    outline: none
+    background-position: 0 0
+
+  input:focus::-webkit-input-placeholder,
+  input:valid::-webkit-input-placeholder
+    color: rgba($b, .3)
+    font-size: 14px
+    transform: translateY(-25px)
+    visibility: visible !important
+    transition: all .3s ease-in-out
+
+  &-help
+    text-decoration: underline
+    color: $b
+    &__one
+      float: left
+    &__two
+      float: right
+
+
 // btns
 .btn
   position: relative
@@ -289,6 +347,12 @@ $btn-default-bg: $blue
 .btn-gr
   background-color: $green
 
+.btn-log
+  text-transform: inherit
+  width: 100%
+  border-radius: 50px
+  margin-top: 15px
+  margin-bottom: 20px
 
 //ripple
 .withripple

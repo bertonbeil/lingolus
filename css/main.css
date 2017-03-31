@@ -5128,7 +5128,78 @@ section {
   cursor: pointer;
 }
 
-/* line 251, ../sass/_dreamlang.sass */
+/* line 250, ../sass/_dreamlang.sass */
+.sign {
+  position: relative;
+  margin-top: 130px;
+  padding: 30px 0;
+  background: #ffffff;
+  text-align: center;
+}
+/* line 257, ../sass/_dreamlang.sass */
+.sign-cover {
+  margin-bottom: 35px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+/* line 263, ../sass/_dreamlang.sass */
+.sign-title {
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+/* line 268, ../sass/_dreamlang.sass */
+.logfrom {
+  width: 350px;
+  max-width: 350px;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+/* line 274, ../sass/_dreamlang.sass */
+.logfrom-input {
+  width: 100%;
+  padding: 10px 0;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  outline: 0;
+  margin-bottom: 25px;
+  background-position: -25rem 0;
+  background-size: 25rem 100%;
+}
+/* line 285, ../sass/_dreamlang.sass */
+.logfrom input:focus,
+.logfrom input:valid {
+  box-shadow: none;
+  outline: none;
+  background-position: 0 0;
+}
+/* line 291, ../sass/_dreamlang.sass */
+.logfrom input:focus::-webkit-input-placeholder,
+.logfrom input:valid::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.3);
+  font-size: 14px;
+  transform: translateY(-25px);
+  visibility: visible !important;
+  transition: all 0.3s ease-in-out;
+}
+/* line 299, ../sass/_dreamlang.sass */
+.logfrom-help {
+  text-decoration: underline;
+  color: #000000;
+}
+/* line 302, ../sass/_dreamlang.sass */
+.logfrom-help__one {
+  float: left;
+}
+/* line 304, ../sass/_dreamlang.sass */
+.logfrom-help__two {
+  float: right;
+}
+
+/* line 309, ../sass/_dreamlang.sass */
 .btn {
   position: relative;
   font-size: 1.2rem;
@@ -5141,19 +5212,19 @@ section {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
   background-color: #2196f3;
 }
-/* line 263, ../sass/_dreamlang.sass */
+/* line 321, ../sass/_dreamlang.sass */
 .btn:hover, .btn:focus, .btn.focus {
   outline: 0;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.18), 0 8px 16px rgba(0, 0, 0, 0.36);
   background-color: #2196f3;
 }
-/* line 270, ../sass/_dreamlang.sass */
+/* line 328, ../sass/_dreamlang.sass */
 .btn:active, .btn.active {
   outline: 0;
   background-image: none;
 }
 
-/* line 275, ../sass/_dreamlang.sass */
+/* line 333, ../sass/_dreamlang.sass */
 .btn-default {
   color: #ffffff;
   background-color: #2196f3;
@@ -5198,7 +5269,7 @@ section {
   background-color: #ffffff;
 }
 
-/* line 278, ../sass/_dreamlang.sass */
+/* line 336, ../sass/_dreamlang.sass */
 .btn-gr {
   color: #ffffff;
   background-color: #00e676;
@@ -5243,7 +5314,7 @@ section {
   background-color: #ffffff;
 }
 
-/* line 281, ../sass/_dreamlang.sass */
+/* line 339, ../sass/_dreamlang.sass */
 .btn-info {
   color: #fff;
   background-color: #5bc0de;
@@ -5288,23 +5359,32 @@ section {
   background-color: #fff;
 }
 
-/* line 285, ../sass/_dreamlang.sass */
+/* line 343, ../sass/_dreamlang.sass */
 .btn-dream {
   background-color: #2196f3;
   margin-bottom: 30px;
 }
 
-/* line 289, ../sass/_dreamlang.sass */
+/* line 347, ../sass/_dreamlang.sass */
 .btn-gr {
   background-color: #00e676;
 }
 
-/* line 294, ../sass/_dreamlang.sass */
+/* line 350, ../sass/_dreamlang.sass */
+.btn-log {
+  text-transform: inherit;
+  width: 100%;
+  border-radius: 50px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+/* line 358, ../sass/_dreamlang.sass */
 .withripple {
   position: relative;
 }
 
-/* line 297, ../sass/_dreamlang.sass */
+/* line 361, ../sass/_dreamlang.sass */
 .ripple-container {
   position: absolute;
   top: 0;
@@ -5317,7 +5397,7 @@ section {
   pointer-events: none;
 }
 
-/* line 308, ../sass/_dreamlang.sass */
+/* line 372, ../sass/_dreamlang.sass */
 .ripple {
   position: absolute;
   width: 20px;
@@ -5338,14 +5418,14 @@ section {
   opacity: 0;
   pointer-events: none;
 }
-/* line 328, ../sass/_dreamlang.sass */
+/* line 392, ../sass/_dreamlang.sass */
 .ripple.ripple-on {
   -webkit-transition: opacity 0.15s ease-in 0s, -webkit-transform 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
   -o-transition: opacity 0.15s ease-in 0s, -o-transform 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
   transition: opacity 0.15s ease-in 0s, transform 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
   opacity: 0.3;
 }
-/* line 333, ../sass/_dreamlang.sass */
+/* line 397, ../sass/_dreamlang.sass */
 .ripple.ripple-out {
   -webkit-transition: opacity 0.1s linear 0s !important;
   -o-transition: opacity 0.1s linear 0s !important;
