@@ -52,9 +52,51 @@
       <img src="img/log.png" alt="" class="sign-cover">
       <h4 class="sign-title">Registration</h4>
       <form action="" class="logfrom">
+        <input class="logfrom-input" type="text" placeholder="Fisrt name" required>
+        <input class="logfrom-input" type="text" placeholder="Last name" required>
         <input class="logfrom-input" type="email" placeholder="Email" required>
-        <input class="logfrom-input" type="text" placeholder="Login" required>
         <input class="logfrom-input" type="password" placeholder="Password" required>
+        <div class="form-group">
+          <p>The day of your birth "dd/mm/yyyy"</p>
+          <select class="lingulus-select lingulus-select-day" name="" id="">
+            <option value="">1</option>
+            <option value="">2</option>
+            <option value="">3</option>
+            <option value="">4</option>
+          </select>
+          <select class="lingulus-select lingulus-select-month" name="" id="">
+            <option value="">01</option>
+            <option value="">02</option>
+            <option value="">03</option>
+            <option value="">04</option>
+          </select>
+          <select class="lingulus-select lingulus-select-year" name="" id="">
+            <option value="">1901</option>
+            <option value="">1902</option>
+            <option value="">1903</option>
+            <option value="">1903</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <p>Choose language you wanna learn</p>
+          <select class="lingulus-select lingulus-select-lang" name="">
+            <option value="">English</option>
+            <option value="">English</option>
+            <option value="">English</option>
+          </select>
+        </div>
+        <div class="volunteer-toggle">
+        	<input type="checkbox" id="volunteer" name="volunteer" class="switch" />
+        	<label for="volunteer">Become a volunteer</label>
+        </div>
+        <div id="volunteerLang" class="form-group volunteer-lang">
+          <p>Choose language you wanna teach</p>
+          <select class="lingulus-select lingulus-select-lang" name="">
+            <option value="">English</option>
+            <option value="">English</option>
+            <option value="">English</option>
+          </select>
+        </div>
         <button class="btn btn-gr btn-log">Sign up</button>
       </form>
     </div>

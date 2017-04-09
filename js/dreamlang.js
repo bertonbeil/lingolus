@@ -551,3 +551,13 @@ $('#login').hover(
     $('#loginPopover').removeClass('in');
   }
 );
+
+// volunteer toggle
+$('#volunteer').on('click', function () {
+  console.log(this);
+  if( $(this).is(':checked') ) {
+    $('#volunteerLang').show();
+  } else {
+    $('#volunteerLang').hide();
+  }
+});
