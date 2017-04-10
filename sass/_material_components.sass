@@ -1,0 +1,186 @@
+//ripple
+.withripple
+  position: relative
+
+.ripple-container
+  position: absolute
+  top: 0
+  left: 0
+  z-index: 1
+  width: 100%
+  height: 100%
+  overflow: hidden
+  border-radius: inherit
+  pointer-events: none
+
+.ripple
+  position: absolute
+  width: 20px
+  height: 20px
+  margin-left: -10px
+  margin-top: -10px
+  border-radius: 100%
+  background-color: #fff
+  background-color: rgba(255, 255, 255, 0.05)
+  -webkit-transform: scale(1)
+  -ms-transform: scale(1)
+  -o-transform: scale(1)
+  transform: scale(1)
+  -webkit-transform-origin: 50%
+  -ms-transform-origin: 50%
+  -o-transform-origin: 50%
+  transform-origin: 50%
+  opacity: 0
+  pointer-events: none
+
+  &.ripple-on
+    -webkit-transition: opacity 0.15s ease-in 0s, -webkit-transform 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.1s
+    -o-transition: opacity 0.15s ease-in 0s, -o-transform 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.1s
+    transition: opacity 0.15s ease-in 0s, transform 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.1s
+    opacity: .3
+  &.ripple-out
+    -webkit-transition: opacity 0.1s linear 0s !important
+    -o-transition: opacity 0.1s linear 0s !important
+    transition: opacity 0.1s linear 0s !important
+    opacity: 0
+
+// toggle volunteer
+.volunteer-toggle
+  clear: both
+  margin-top: 15px
+  margin-bottom: 25px
+
+  label
+    float: left
+
+  input:empty
+    display: none
+    ~ label
+      &:before, &:after
+        position: absolute
+        display: block
+        content: ' '
+        cursor: pointer
+        -webkit-transition: all 200ms ease-in
+        transition: all 200ms ease-in
+      &:before
+        top: 5px
+        right: 4px
+        width: 34px
+        height: 14px
+        border-radius: 6px
+        background-color: #5a5a5a
+        opacity: 0.60
+  position: relative
+  float: left
+  line-height: 1.6em
+  width: 100%
+  cursor: pointer
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+
+input.switch:empty ~ label:after
+  top: 2px
+  right: 20px
+  width: 1.4em
+  height: 8px
+  bottom: 0.1em
+  margin-left: 0.1em
+  background-color: #ffffff
+  border-radius: 50%
+  width: 20px
+  height: 20px
+  border-radius: 50%
+  border: 0
+  border-color: #5a5a5a
+  -webkit-box-shadow: -1px 2px 6px -1px rgba(0, 0, 0, 0.75)
+  -moz-box-shadow: -1px 2px 6px -1px rgba(0, 0, 0, 0.75)
+  box-shadow: -1px 2px 6px -1px rgba(0, 0, 0, 0.75)
+
+.volunteer-toggle input:checked ~ label
+  &:before
+    background-color: #00aeef
+  &:after
+    right: 0px
+    background-color: #00aeef
+    border-color: #00aeef
+
+// form group
+.form-group
+  text-align: left
+  margin-bottom: 25px
+
+.lingulus-select
+  padding: 5px
+  border-top: 0
+  border-right: 0
+  border-left: 0
+  outline: 0
+
+  &-day
+    width: 20%
+    float: left
+
+  &-month
+    width: 20%
+    margin-left: 30px
+
+  &-year
+    width: 40%
+    float: right
+
+  &-lang
+    width: 100%
+
+.volunteer-lang
+  display: none
+
+.logfrom
+  width: 100%
+  margin: 0 auto
+  padding: 30px 0
+
+  &.popover
+    padding-bottom: 0
+
+  &-input
+    display: block
+    float: left
+    margin-bottom: 25px
+    width: 100%
+    padding: 10px 0
+    border: none
+    border-bottom: solid 1px $grey
+    background: linear-gradient(to bottom, rgba($w, 0) 96%, $dblue 4%)
+    background-position: -25rem 0
+    background-size: 25rem 100%
+    background-repeat: no-repeat
+    transition: all .3s cubic-bezier(0.4, 0, 0.2, 1)
+
+  input:focus,
+  input:valid
+    box-shadow: none
+    outline: none
+    border-color: $dblue
+    background-position: 0 0
+
+  input::-webkit-input-placeholder,
+  input::-webkit-input-placeholder
+    transition: all .3s cubic-bezier(0.4, 0, 0.2, 1)
+
+  input:focus::-webkit-input-placeholder,
+  input:valid::-webkit-input-placeholder
+    color: rgba($b, .3)
+    font-size: 14px
+    transform: translateY(-25px)
+    visibility: visible !important
+
+  &-help
+    text-decoration: underline
+    color: $b
+    &__one
+      float: left
+    &__two
+      float: right

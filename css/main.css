@@ -4804,6 +4804,233 @@ p {
   }
 }
 
+/* line 2, ../sass/_material_components.sass */
+.withripple {
+  position: relative;
+}
+
+/* line 5, ../sass/_material_components.sass */
+.ripple-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+/* line 16, ../sass/_material_components.sass */
+.ripple {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  margin-left: -10px;
+  margin-top: -10px;
+  border-radius: 100%;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.05);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+  -webkit-transform-origin: 50%;
+  -ms-transform-origin: 50%;
+  -o-transform-origin: 50%;
+  transform-origin: 50%;
+  opacity: 0;
+  pointer-events: none;
+}
+/* line 36, ../sass/_material_components.sass */
+.ripple.ripple-on {
+  -webkit-transition: opacity 0.15s ease-in 0s, -webkit-transform 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
+  -o-transition: opacity 0.15s ease-in 0s, -o-transform 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
+  transition: opacity 0.15s ease-in 0s, transform 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
+  opacity: 0.3;
+}
+/* line 41, ../sass/_material_components.sass */
+.ripple.ripple-out {
+  -webkit-transition: opacity 0.1s linear 0s !important;
+  -o-transition: opacity 0.1s linear 0s !important;
+  transition: opacity 0.1s linear 0s !important;
+  opacity: 0;
+}
+
+/* line 48, ../sass/_material_components.sass */
+.volunteer-toggle {
+  clear: both;
+  margin-top: 15px;
+  margin-bottom: 25px;
+  position: relative;
+  float: left;
+  line-height: 1.6em;
+  width: 100%;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/* line 53, ../sass/_material_components.sass */
+.volunteer-toggle label {
+  float: left;
+}
+/* line 56, ../sass/_material_components.sass */
+.volunteer-toggle input:empty {
+  display: none;
+}
+/* line 59, ../sass/_material_components.sass */
+.volunteer-toggle input:empty ~ label:before, .volunteer-toggle input:empty ~ label:after {
+  position: absolute;
+  display: block;
+  content: " ";
+  cursor: pointer;
+  -webkit-transition: all 200ms ease-in;
+  transition: all 200ms ease-in;
+}
+/* line 66, ../sass/_material_components.sass */
+.volunteer-toggle input:empty ~ label:before {
+  top: 5px;
+  right: 4px;
+  width: 34px;
+  height: 14px;
+  border-radius: 6px;
+  background-color: #5a5a5a;
+  opacity: 0.6;
+}
+
+/* line 84, ../sass/_material_components.sass */
+input.switch:empty ~ label:after {
+  top: 2px;
+  right: 20px;
+  width: 1.4em;
+  height: 8px;
+  bottom: 0.1em;
+  margin-left: 0.1em;
+  background-color: #ffffff;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 0;
+  border-color: #5a5a5a;
+  -webkit-box-shadow: -1px 2px 6px -1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px 2px 6px -1px rgba(0, 0, 0, 0.75);
+  box-shadow: -1px 2px 6px -1px rgba(0, 0, 0, 0.75);
+}
+
+/* line 103, ../sass/_material_components.sass */
+.volunteer-toggle input:checked ~ label:before {
+  background-color: #00aeef;
+}
+/* line 105, ../sass/_material_components.sass */
+.volunteer-toggle input:checked ~ label:after {
+  right: 0px;
+  background-color: #00aeef;
+  border-color: #00aeef;
+}
+
+/* line 111, ../sass/_material_components.sass */
+.form-group {
+  text-align: left;
+  margin-bottom: 25px;
+}
+
+/* line 115, ../sass/_material_components.sass */
+.lingulus-select {
+  padding: 5px;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  outline: 0;
+}
+/* line 122, ../sass/_material_components.sass */
+.lingulus-select-day {
+  width: 20%;
+  float: left;
+}
+/* line 126, ../sass/_material_components.sass */
+.lingulus-select-month {
+  width: 20%;
+  margin-left: 30px;
+}
+/* line 130, ../sass/_material_components.sass */
+.lingulus-select-year {
+  width: 40%;
+  float: right;
+}
+/* line 134, ../sass/_material_components.sass */
+.lingulus-select-lang {
+  width: 100%;
+}
+
+/* line 137, ../sass/_material_components.sass */
+.volunteer-lang {
+  display: none;
+}
+
+/* line 140, ../sass/_material_components.sass */
+.logfrom {
+  width: 100%;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+/* line 145, ../sass/_material_components.sass */
+.logfrom.popover {
+  padding-bottom: 0;
+}
+/* line 148, ../sass/_material_components.sass */
+.logfrom-input {
+  display: block;
+  float: left;
+  margin-bottom: 25px;
+  width: 100%;
+  padding: 10px 0;
+  border: none;
+  border-bottom: solid 1px #e0e0e0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, #1976d2 4%);
+  background-position: -25rem 0;
+  background-size: 25rem 100%;
+  background-repeat: no-repeat;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+/* line 162, ../sass/_material_components.sass */
+.logfrom input:focus,
+.logfrom input:valid {
+  box-shadow: none;
+  outline: none;
+  border-color: #1976d2;
+  background-position: 0 0;
+}
+/* line 169, ../sass/_material_components.sass */
+.logfrom input::-webkit-input-placeholder,
+.logfrom input::-webkit-input-placeholder {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+/* line 173, ../sass/_material_components.sass */
+.logfrom input:focus::-webkit-input-placeholder,
+.logfrom input:valid::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.3);
+  font-size: 14px;
+  transform: translateY(-25px);
+  visibility: visible !important;
+}
+/* line 180, ../sass/_material_components.sass */
+.logfrom-help {
+  text-decoration: underline;
+  color: #000000;
+}
+/* line 183, ../sass/_material_components.sass */
+.logfrom-help__one {
+  float: left;
+}
+/* line 185, ../sass/_material_components.sass */
+.logfrom-help__two {
+  float: right;
+}
+
 /* line 1, ../sass/_dreamlang.sass */
 html, body {
   height: 100%;
@@ -5174,67 +5401,7 @@ section {
   margin-bottom: 30px;
 }
 
-/* line 289, ../sass/_dreamlang.sass */
-.logfrom {
-  width: 100%;
-  margin: 0 auto;
-  padding: 30px 0;
-}
-/* line 294, ../sass/_dreamlang.sass */
-.logfrom.popover {
-  padding-bottom: 0;
-}
-/* line 297, ../sass/_dreamlang.sass */
-.logfrom-input {
-  display: block;
-  float: left;
-  margin-bottom: 25px;
-  width: 100%;
-  padding: 10px 0;
-  border: none;
-  border-bottom: solid 1px #e0e0e0;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, #1976d2 4%);
-  background-position: -25rem 0;
-  background-size: 25rem 100%;
-  background-repeat: no-repeat;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-/* line 311, ../sass/_dreamlang.sass */
-.logfrom input:focus,
-.logfrom input:valid {
-  box-shadow: none;
-  outline: none;
-  border-color: #1976d2;
-  background-position: 0 0;
-}
-/* line 318, ../sass/_dreamlang.sass */
-.logfrom input::-webkit-input-placeholder,
-.logfrom input::-webkit-input-placeholder {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-/* line 322, ../sass/_dreamlang.sass */
-.logfrom input:focus::-webkit-input-placeholder,
-.logfrom input:valid::-webkit-input-placeholder {
-  color: rgba(0, 0, 0, 0.3);
-  font-size: 14px;
-  transform: translateY(-25px);
-  visibility: visible !important;
-}
-/* line 329, ../sass/_dreamlang.sass */
-.logfrom-help {
-  text-decoration: underline;
-  color: #000000;
-}
-/* line 332, ../sass/_dreamlang.sass */
-.logfrom-help__one {
-  float: left;
-}
-/* line 334, ../sass/_dreamlang.sass */
-.logfrom-help__two {
-  float: right;
-}
-
-/* line 339, ../sass/_dreamlang.sass */
+/* line 290, ../sass/_dreamlang.sass */
 .btn {
   position: relative;
   font-size: 1.2rem;
@@ -5247,19 +5414,17 @@ section {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
   background-color: #2196f3;
 }
-/* line 351, ../sass/_dreamlang.sass */
+/* line 302, ../sass/_dreamlang.sass */
 .btn:hover, .btn:focus, .btn.focus {
-  outline: 0;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.18), 0 8px 16px rgba(0, 0, 0, 0.36);
   background-color: #2196f3;
 }
-/* line 358, ../sass/_dreamlang.sass */
+/* line 308, ../sass/_dreamlang.sass */
 .btn:active, .btn.active {
-  outline: 0;
   background-image: none;
 }
 
-/* line 363, ../sass/_dreamlang.sass */
+/* line 312, ../sass/_dreamlang.sass */
 .btn-default {
   color: #ffffff;
   background-color: #2196f3;
@@ -5304,7 +5469,7 @@ section {
   background-color: #ffffff;
 }
 
-/* line 366, ../sass/_dreamlang.sass */
+/* line 315, ../sass/_dreamlang.sass */
 .btn-gr {
   color: #ffffff;
   background-color: #00e676;
@@ -5349,7 +5514,7 @@ section {
   background-color: #ffffff;
 }
 
-/* line 369, ../sass/_dreamlang.sass */
+/* line 318, ../sass/_dreamlang.sass */
 .btn-info {
   color: #fff;
   background-color: #5bc0de;
@@ -5394,191 +5559,24 @@ section {
   background-color: #fff;
 }
 
-/* line 373, ../sass/_dreamlang.sass */
+/* line 322, ../sass/_dreamlang.sass */
 .btn-dream {
   background-color: #2196f3;
   margin-bottom: 30px;
 }
 
-/* line 377, ../sass/_dreamlang.sass */
+/* line 326, ../sass/_dreamlang.sass */
 .btn-gr {
   background-color: #00e676;
 }
 
-/* line 380, ../sass/_dreamlang.sass */
+/* line 329, ../sass/_dreamlang.sass */
 .btn-log {
   text-transform: inherit;
   width: 100%;
   border-radius: 50px;
   margin-top: 15px;
   margin-bottom: 20px;
-}
-
-/* line 388, ../sass/_dreamlang.sass */
-.withripple {
-  position: relative;
-}
-
-/* line 391, ../sass/_dreamlang.sass */
-.ripple-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  border-radius: inherit;
-  pointer-events: none;
-}
-
-/* line 402, ../sass/_dreamlang.sass */
-.ripple {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  margin-left: -10px;
-  margin-top: -10px;
-  border-radius: 100%;
-  background-color: #fff;
-  background-color: rgba(255, 255, 255, 0.05);
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  -o-transform: scale(1);
-  transform: scale(1);
-  -webkit-transform-origin: 50%;
-  -ms-transform-origin: 50%;
-  -o-transform-origin: 50%;
-  transform-origin: 50%;
-  opacity: 0;
-  pointer-events: none;
-}
-/* line 422, ../sass/_dreamlang.sass */
-.ripple.ripple-on {
-  -webkit-transition: opacity 0.15s ease-in 0s, -webkit-transform 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
-  -o-transition: opacity 0.15s ease-in 0s, -o-transform 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
-  transition: opacity 0.15s ease-in 0s, transform 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
-  opacity: 0.3;
-}
-/* line 427, ../sass/_dreamlang.sass */
-.ripple.ripple-out {
-  -webkit-transition: opacity 0.1s linear 0s !important;
-  -o-transition: opacity 0.1s linear 0s !important;
-  transition: opacity 0.1s linear 0s !important;
-  opacity: 0;
-}
-
-/* line 434, ../sass/_dreamlang.sass */
-.volunteer-toggle {
-  clear: both;
-  margin-top: 15px;
-  margin-bottom: 25px;
-  position: relative;
-  float: left;
-  line-height: 1.6em;
-  width: 100%;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-/* line 439, ../sass/_dreamlang.sass */
-.volunteer-toggle label {
-  float: left;
-}
-/* line 442, ../sass/_dreamlang.sass */
-.volunteer-toggle input:empty {
-  display: none;
-}
-/* line 445, ../sass/_dreamlang.sass */
-.volunteer-toggle input:empty ~ label:before, .volunteer-toggle input:empty ~ label:after {
-  position: absolute;
-  display: block;
-  content: " ";
-  cursor: pointer;
-  -webkit-transition: all 200ms ease-in;
-  transition: all 200ms ease-in;
-}
-/* line 452, ../sass/_dreamlang.sass */
-.volunteer-toggle input:empty ~ label:before {
-  top: 5px;
-  right: 4px;
-  width: 34px;
-  height: 14px;
-  border-radius: 6px;
-  background-color: #5a5a5a;
-  opacity: 0.6;
-}
-
-/* line 470, ../sass/_dreamlang.sass */
-input.switch:empty ~ label:after {
-  top: 2px;
-  right: 0px;
-  width: 1.4em;
-  height: 8px;
-  bottom: 0.1em;
-  margin-left: 0.1em;
-  background-color: #ffffff;
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  border: 0;
-  border-color: #5a5a5a;
-  -webkit-box-shadow: -1px 2px 6px -1px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: -1px 2px 6px -1px rgba(0, 0, 0, 0.75);
-  box-shadow: -1px 2px 6px -1px rgba(0, 0, 0, 0.75);
-}
-
-/* line 489, ../sass/_dreamlang.sass */
-.volunteer-toggle input:checked ~ label:before {
-  background-color: #00aeef;
-}
-/* line 491, ../sass/_dreamlang.sass */
-.volunteer-toggle input:checked ~ label:after {
-  right: 20px;
-  background-color: #00aeef;
-  border-color: #00aeef;
-}
-
-/* line 497, ../sass/_dreamlang.sass */
-.form-group {
-  text-align: left;
-  margin-bottom: 25px;
-}
-
-/* line 501, ../sass/_dreamlang.sass */
-.lingulus-select {
-  padding: 5px;
-  border-top: 0;
-  border-right: 0;
-  border-left: 0;
-  outline: 0;
-}
-/* line 508, ../sass/_dreamlang.sass */
-.lingulus-select-day {
-  width: 20%;
-  float: left;
-}
-/* line 512, ../sass/_dreamlang.sass */
-.lingulus-select-month {
-  width: 20%;
-  margin-left: 30px;
-}
-/* line 516, ../sass/_dreamlang.sass */
-.lingulus-select-year {
-  width: 40%;
-  float: right;
-}
-/* line 520, ../sass/_dreamlang.sass */
-.lingulus-select-lang {
-  width: 100%;
-}
-
-/* line 523, ../sass/_dreamlang.sass */
-.volunteer-lang {
-  display: none;
 }
 
 @media (max-width: 1199px) {
